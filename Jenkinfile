@@ -1,0 +1,16 @@
+pipeline {
+    agent {label "dev"}
+
+    steps{
+        stage("compile"){
+            echo "compiling the code"
+        }
+        stage("test"){
+            echo "testing the code"
+        }
+
+         stage("deploy"){
+            echo "deploying the code"
+        }
+    }
+}
