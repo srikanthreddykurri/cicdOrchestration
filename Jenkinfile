@@ -1,16 +1,22 @@
 pipeline {
     agent {label "dev"}
 
-    steps{
+    stages{
         stage("compile"){
+            steps{
             echo "compiling the code"
-        }
+            }
+    }
         stage("test"){
-            echo "testing the code"
+            steps{
+                echo "testing the code"
+            }
         }
 
          stage("deploy"){
-            echo "deploying the code"
+            steps{
+                echo "deploying the code"
+            }
         }
     }
 }
